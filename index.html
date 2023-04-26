@@ -12,28 +12,31 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select name="" id="">
+      <select id="citySelect">
         <option value="">Select a city:</option>
-        <option value="">London</option>
-        <option value="">Berlin</option>
-        <option value="">Moscow</option>
-        <option value="">Mumbai</option>
+        <option value="Europe/London">London</option>
+        <option value="Europe/Berlin">Berlin</option>
+        <option value="Europe/Moscow">Moscow</option>
+        <option value="Asia/Seoul">Seoul</option>
+        <option value="America/New_York">New York</option>
       </select>
 
-      <div class="city" id="los-angeles">
-        <div>
-          <h2>Los Angeles</h2>
-          <div class="date">23 April 2023</div>
+      <div id="cities">
+        <div class="city" id="los-angeles">
+          <div>
+            <h2>Los Angeles</h2>
+            <div class="date">23 April 2023</div>
+          </div>
+          <div class="time">13:50:00 <small> AM</small></div>
         </div>
-        <div class="time">13:50:00 <small> AM</small></div>
-      </div>
 
-      <div class="city" id="seoul">
-        <div>
-          <h2>Seoul</h2>
-          <div class="date">23 April 2023</div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo</h2>
+            <div class="date">23 April 2023</div>
+          </div>
+          <div class="time">13:50:00</div>
         </div>
-        <div class="time">13:50:00</div>
       </div>
     </div>
     <footer>

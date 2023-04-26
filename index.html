@@ -6,37 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>World Clock</title>
   </head>
   <body>
     <div class="container">
-      <h1>World Clock</h1>
+      <h1>Time around the World</h1>
       <select id="citySelect">
         <option value="">Select a city:</option>
-        <option value="current">My current location</option>
-        <option value="Europe/London">London</option>
+        <option value="current">My current location 🌍</option>
+        <option value="Pacific/Honolulu">Honolulu</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+        <option value="America/Bogota">Bogota</option>
+        <option value="America/New_York">New York</option>
         <option value="Europe/Berlin">Berlin</option>
         <option value="Europe/Moscow">Moscow</option>
-        <option value="Asia/Seoul">Seoul</option>
-        <option value="America/New_York">New York</option>
+        <option value="Asia/Bangkok">Bangkok</option>
+        <option value="Asia/Singapore">Singapore</option>
+        <option value="Asia/Kamchatka">Kamchatka</option>
       </select>
 
       <div id="cities">
-        <div class="city" id="los-angeles">
+        <div class="city" id="reykjavik">
           <div>
-            <h2>Los Angeles</h2>
-            <div class="date">23 April 2023</div>
+            <h2>Reykjavik</h2>
+            <div class="date"></div>
           </div>
-          <div class="time">13:50:00 <small> AM</small></div>
+          <div class="time"><small> AM</small></div>
+        </div>
+
+        <div class="city" id="mauritius">
+          <div>
+            <h2>Mauritius</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
 
         <div class="city" id="tokyo">
           <div>
             <h2>Tokyo</h2>
-            <div class="date">23 April 2023</div>
+            <div class="date"></div>
           </div>
-          <div class="time">13:50:00</div>
+          <div class="time"></div>
         </div>
       </div>
     </div>

@@ -1,16 +1,25 @@
 function updateTime() {
   // LA
 
-  let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDate = losAngelesElement.querySelector(".date");
-    let losAngelesTime = losAngelesElement.querySelector(".time");
-    let losAngelesTimeElement = moment().tz("America/Los_Angeles");
+  let reykjavikElement = document.querySelector("#reykjavik");
+  if (reykjavikElement) {
+    let reykjavikDate = reykjavikElement.querySelector(".date");
+    let reykjavikTime = reykjavikElement.querySelector(".time");
+    let reykjavikTimeElement = moment().tz("Atlantic/Reykjavik");
 
-    losAngelesDate.innerHTML = moment().format("MMMM Do YYYY");
-    losAngelesTime.innerHTML = `${losAngelesTimeElement.format(
-      "h:mm:ss"
-    )} <small>${losAngelesTimeElement.format("A")}</small>`;
+    reykjavikDate.innerHTML = moment().format("MMMM Do YYYY");
+    reykjavikTime.innerHTML = `${reykjavikTimeElement.format("HH:MM:SS")} `;
+  }
+
+  // Mauritius
+  let mauritiusElement = document.querySelector("#mauritius");
+  if (mauritiusElement) {
+    let mauritiusDate = mauritiusElement.querySelector(".date");
+    let mauritiusTime = mauritiusElement.querySelector(".time");
+    let mauritiusTimeElement = moment().tz("Indian/Mauritius");
+
+    mauritiusDate.innerHTML = moment().format("MMMM Do YYYY");
+    mauritiusTime.innerHTML = `${mauritiusTimeElement.format("HH:MM:SS")} `;
   }
 
   // Tokyo
@@ -21,9 +30,7 @@ function updateTime() {
     let tokyoTimeElement = moment().tz("Asia/Tokyo");
 
     tokyoDate.innerHTML = moment().format("MMMM Do YYYY");
-    tokyoTime.innerHTML = `${tokyoTimeElement.format(
-      "h:mm:ss"
-    )} <small>${tokyoTimeElement.format("A")}</small>`;
+    tokyoTime.innerHTML = `${tokyoTimeElement.format("HH:MM:SS")} `;
   }
 }
 
@@ -45,10 +52,9 @@ function updateCity(event) {
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
-          <div class="time">${cityTime.format(
-            "h:mm:ss"
-          )}<small> ${cityTime.format("A")}</small></div>
-        </div>`;
+          <div class="time">${cityTime.format("HH:MM:SS")}</div>
+        </div>
+        <a href="index.html">⬅️ All cities</a>`;
 }
 
 let citiesSelectElement = document.querySelector("#citySelect");

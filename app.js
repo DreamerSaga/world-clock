@@ -8,7 +8,7 @@ function updateTime() {
     let reykjavikTimeElement = moment().tz("Atlantic/Reykjavik");
 
     reykjavikDate.innerHTML = moment().format("MMMM Do YYYY");
-    reykjavikTime.innerHTML = `${reykjavikTimeElement.format("HH:MM:SS")} `;
+    reykjavikTime.innerHTML = `${reykjavikTimeElement.format("HH:mm:ss")} `;
   }
 
   // Mauritius
@@ -19,7 +19,7 @@ function updateTime() {
     let mauritiusTimeElement = moment().tz("Indian/Mauritius");
 
     mauritiusDate.innerHTML = moment().format("MMMM Do YYYY");
-    mauritiusTime.innerHTML = `${mauritiusTimeElement.format("HH:MM:SS")} `;
+    mauritiusTime.innerHTML = `${mauritiusTimeElement.format("HH:mm:ss")} `;
   }
 
   // Tokyo
@@ -30,7 +30,7 @@ function updateTime() {
     let tokyoTimeElement = moment().tz("Asia/Tokyo");
 
     tokyoDate.innerHTML = moment().format("MMMM Do YYYY");
-    tokyoTime.innerHTML = `${tokyoTimeElement.format("HH:MM:SS")} `;
+    tokyoTime.innerHTML = `${tokyoTimeElement.format("HH:mm:ss")} `;
   }
 }
 
@@ -52,7 +52,7 @@ function updateCity(event) {
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
-          <div class="time">${cityTime.format("HH:MM:SS")}</div>
+          <div class="time">${cityTime.format("HH:mm:ss")}</div>
         </div>
         <a href="index.html">⬅️ All cities</a>`;
 }
